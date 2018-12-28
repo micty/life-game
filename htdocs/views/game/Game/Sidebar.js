@@ -69,7 +69,7 @@ KISP.panel('/Game/Sidebar', function (require, module, panel) {
 
         Config.on({
             'change': function (data) {
-                meta.interval = 1000 / data.frequency;
+                meta.interval = data.interval;
                 meta.total = data.total;
 
                 panel.fire('apply', [data]);
