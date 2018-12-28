@@ -9,9 +9,14 @@ KISP.panel('/Game/Table', function (require, module, panel) {
 
     var table = null;
 
+    var meta = {
+        row: 0,
+        column: 0,
+        size: 0,
+    };
 
 
-
+    
     panel.on('init', function () {
 
       
@@ -24,19 +29,39 @@ KISP.panel('/Game/Table', function (require, module, panel) {
     *   options = {
     *       row: 80,        //行数。
     *       column: 120,    //列数。
-    *       size: 20,       //单元格大小。
+    *       size: 5,        //单元格大小。 padding 大小。
     *   };
     */
     panel.on('render', function (options) {
+
+        var row = options.row;
+        var column = options.column;
+        var size = options.size;
+
         if (table) {
+            //行数和列数不变，则复用。
+            if (row == meta.row && column == meta.column) {
+                if (size != meta.size) {
+                    table.$.removeClass(`size-${meta.size}`);
+                    table.$.addClass(`size-${size}`);
+                    meta.size = size;
+                }
+
+                return;
+            }
+
             table.destroy();
         }
 
+
+
+        Object.assign(meta, options);
+
         table = new Table({
             'container': panel.container,
-            'x': options.column,
-            'y': options.row,
-            'class': `size-${options.size}`,
+            'x': column,
+            'y': row,
+            'class': `size-${size}`,
         });
 
         table.on('click', {
@@ -55,11 +80,12 @@ KISP.panel('/Game/Table', function (require, module, panel) {
             },
         });
 
-
         table.render();
 
         
     });
+
+
 
 
     return {
