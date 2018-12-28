@@ -11,7 +11,8 @@
  
 在平面上随机选几个格子为白，设定初始条件，然后不加任何干扰，让其自行演化。
 
-DEMO [http://www.definejs.com/life-game/]
+
+[**示例页面**](http://www.definejs.com/life-game/)
 
 -------------------------------------
 
