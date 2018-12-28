@@ -1,0 +1,13 @@
+﻿<template id="tpl-Table">
+    <table id="{id}" class="{class}" style="{width}" {attributes}>
+        <tbody>
+            <template name="tr" placeholder="rows">
+                <tr id="{id}" {class} {attributes} {title}>
+                    <template name="td" placeholder="cells">
+                        <td id="{id}" {class} {attributes} {title} style="{display}">{html}</td>
+                    </template>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+</template>

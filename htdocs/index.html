@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>生命演化游戏</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <link rel="stylesheet" href="f/kisp/kisp.debug.css?E951" />
+
+
+    <link rel="stylesheet" href="style/css/style.less.global.css?76FA" />
+    <link rel="stylesheet" href="style/css/views.game.view.css?1DC9" />
+
+
+</head>
+
+
+
+<body>
+
+    
+    <section data-view="/Game" class="view-game" style="display: none;">
+       
+        <div data-panel="/Game/Sidebar" class="sidebar">
+            <fieldset>
+                <legend>说明</legend>
+                <div class="desc">
+                    几十年前，科学家们曾经做过一个有趣的实验，把平面区域分割成很多格子，每个格子可以有黑白两色，每个格子的颜色由它周围的八个格子约束：
+                    <ul>
+                        <li>1．如果一个格子周围有3个格子为白，则该格子为白；</li>
+                        <li>2．如果一个格子周围有2个格子为白，则该格子颜色不变；</li>
+                        <li>3．如果一个格子周围白色格子少于2个，则该格子为黑；</li>
+                        <li>4．如果一个格子周围有超过3个格子为白，则该格子为黑。</li>
+                    </ul>
+                    在平面上随机选几个格子为白，设定初始条件，然后不加任何干扰，让其自行演化。
+                </div>
+            </fieldset>
+           
+            <fieldset data-panel="/Game/Sidebar/Operator">
+                <template>
+                    <legend>操作</legend>
+                    <button data-cmd="run" class="{class}">{text}</button>
+                    <button data-cmd="clear" class="clear" {disabled}>重置</button>
+                </template>
+            </fieldset>
+    
+            <fieldset data-panel="/Game/Sidebar/Config" class="config">
+                <template>
+                    <legend>选项</legend>
+                    <ul>
+                        <li>表格行数：<input name="row" type="number" value="{row}" /></li>
+                        <li>表格列数：<input name="column" type="number" value="{column}" /></li>
+                        <li>格子尺寸：<input name="size" type="number" value="{size}" min="4" max="40" />px</li>
+                        <li>刷新频率：<input name="frequency" type="number" value="{frequency}" />fps</li>
+                    </ul>
+                </template>
+            </fieldset>
+    
+            <fieldset data-panel="/Game/Sidebar/Stat">
+                <template>
+                    <legend>统计</legend>
+                    <ul>
+                        <li>运行帧数：<label>{frame}</label></li>
+                        <li>白色格数：<label>{checked}</label></li>
+                        <li>黑色格数：<label>{unchecked}</label></li>
+                        <li>总格子数：<label>{total}</label></li>
+                    </ul>
+                </template>
+            </fieldset>
+            <div class="copyright">本页面由 <a href="https://github.com/micty/life-game" target="_blank">micty</a> 编写实现，无版权，仅属自娱自乐。</div>
+        </div>
+        <div data-panel="/Game/Table">
+    
+        </div>
+    </section>
+
+
+    <template id="tpl-Table">
+        <table id="{id}" class="{class}" style="{width}" {attributes}>
+            <tbody>
+                <template name="tr" placeholder="rows">
+                    <tr id="{id}" {class} {attributes} {title}>
+                        <template name="td" placeholder="cells">
+                            <td id="{id}" {class} {attributes} {title} style="{display}">{html}</td>
+                        </template>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </template>
+
+
+    <script src="f/kisp/jquery/jquery-3.3.1.debug.js?6A07"></script>
+    <script src="f/kisp/kisp.debug.js?5EE6" id="script-KISP"></script>
+
+
+    <script src="config.js?7CDF"></script>
+
+    <script src="lib/table/Table/Meta/Column.js?95F1"></script>
+    <script src="lib/table/Table/Meta.js?E72E"></script>
+    <script src="lib/table/Table/Order.js?3944"></script>
+    <script src="lib/table/Table/Reaction.js?48CE"></script>
+    <script src="lib/table/Table/Row.js?E4A2"></script>
+    <script src="lib/table/Table/Static.js?DF8F"></script>
+    <script src="lib/table/Table/Template.js?5493"></script>
+    <script src="lib/table/Table.defaults.js?AA54"></script>
+    <script src="lib/table/Table.js?5FAA"></script>
+    <script src="lib/Defaults.js?9219"></script>
+    <script src="views/game/Game/Sidebar/Config.js?FCF9"></script>
+    <script src="views/game/Game/Sidebar/Operator.js?E4A8"></script>
+    <script src="views/game/Game/Sidebar/Stat.js?06AF"></script>
+    <script src="views/game/Game/Table/Collection.js?9F67"></script>
+    <script src="views/game/Game/Sidebar.js?75D5"></script>
+    <script src="views/game/Game/Table.js?8C39"></script>
+    <script src="views/game/Game.js?28B6"></script>
+    <script src="index.js?7FBE"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+body {
+    font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    margin: 0;
+    overflow-y: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    ::-webkit-scrollbar {
+        height: 10px !important;
+        width: 8px !important;
+    }
+    ::-webkit-scrollbar-track-piece {
+        background-color: #F2F5F7;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #c8d2dc;
+        border-radius: 4px;
+    }
+    ::-webkit-resizer {
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
+    ol,
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+            list-style: none;
+        }
+    }
+    p {
+        margin: 0;
+    }
+    a {
+        outline: none;
+    }
+}
+
+button,
+
+select {
+    font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+    resize: none;
+    margin: 0;
+    border: none;
+    outline: none;
+    -webkit-apperance:normal;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+input[readonly] {
+    cursor: not-allowed;
+}

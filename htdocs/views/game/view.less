@@ -1,0 +1,301 @@
+.view-game {
+    height: 100%;
+
+    .sidebar {
+        position: absolute;
+        right: 0px;
+        width: 300px;
+        height: 100%;
+        border-left: solid 1px #e5e5e5;
+        padding: 5px 10px;
+        box-sizing: border-box;
+
+        fieldset {
+            border: solid 1px #eee;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 20px;
+
+            legend {
+                font-weight: bold;
+            }
+
+            label {
+                width: 60px;
+                display: inline-block;
+                text-align: right;
+            }
+
+            .desc {
+                color: #848484;
+
+                ul {
+                }
+            }
+
+            &.config {
+                position: relative;
+
+                &.disabled {
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 64px;
+                        background-color: #d8d8d85c;
+                        height: 116px;
+                        position: absolute;
+                        top: 25px;
+                        left: 81px;
+                    }
+                }
+            }
+        }
+
+        ul {
+
+            li {
+                padding: 2px 0px;
+            }
+
+            input {
+                height: 20px;
+                width: 50px;
+                margin-right: 5px;
+                border: solid 1px #eee;
+                padding: 2px 6px;
+            }
+        }
+
+        button {
+            font-family: "Microsoft YaHei",Helvetica,Arial,sans-serif;
+            resize: none;
+            margin: 2px 0 2px 0;
+            outline: none;
+            font-size: 14px;
+            height: 28px;
+            line-height: 28px;
+            padding: 0 8px;
+            border: 1px solid;
+            border-radius: 2px;
+            cursor: pointer;
+            color: #61a7e5;
+            background-color: #fff;
+            border-color: #dce6f0;
+            width: 123px;
+
+            &:hover {
+                border-color: #2196F3;
+                background: #f7fdff;
+            }
+
+            &.clear {
+                color: red;
+            }
+
+            &[disabled] {
+                color: #848586;
+                background-color: #ededed;
+                cursor: not-allowed;
+            }
+
+            &.running {
+                background-color: #2196F3;
+                color: #fff;
+                border-color: #2196F3;
+
+                &:hover {
+                    background-color: #0070c9;
+                }
+            }
+        }
+
+        .copyright {
+            position: absolute;
+            bottom: 9px;
+            font-size: 12px;
+            color: #c6c6c6;
+
+            a {
+                color: #2196F3;
+                &:hover{
+                    color: #FF5722;
+                }
+            }
+        }
+    }
+
+    .Table {
+        border-collapse: collapse;
+        border-spacing: 0px;
+        background: #000;
+
+        td {
+            border: solid 1px #2a323d;
+            padding: 5px;
+
+            &.on {
+                background: #ccc !important;
+            }
+
+            &.add {
+                background: #607D8B !important;
+            }
+
+            &.remove {
+                background: #2c2c2c !important;
+            }
+
+            &:hover {
+                background: #494949;
+            }
+        }
+
+        &.size-4 td {
+            padding: 4px;
+        }
+
+        &.size-5 td {
+            padding: 5px;
+        }
+
+        &.size-6 td {
+            padding: 6px;
+        }
+
+        &.size-7 td {
+            padding: 7px;
+        }
+
+        &.size-8 td {
+            padding: 8px;
+        }
+
+        &.size-9 td {
+            padding: 9px;
+        }
+
+        &.size-10 td {
+            padding: 10px;
+        }
+
+        &.size-11 td {
+            padding: 11px;
+        }
+
+        &.size-12 td {
+            padding: 12px;
+        }
+
+        &.size-13 td {
+            padding: 13px;
+        }
+
+        &.size-14 td {
+            padding: 14px;
+        }
+
+        &.size-15 td {
+            padding: 15px;
+        }
+
+        &.size-16 td {
+            padding: 16px;
+        }
+
+        &.size-17 td {
+            padding: 17px;
+        }
+
+        &.size-18 td {
+            padding: 18px;
+        }
+
+        &.size-19 td {
+            padding: 19px;
+        }
+
+        &.size-20 td {
+            padding: 20px;
+        }
+
+        &.size-21 td {
+            padding: 21px;
+        }
+
+        &.size-22 td {
+            padding: 22px;
+        }
+
+        &.size-23 td {
+            padding: 23px;
+        }
+
+        &.size-24 td {
+            padding: 24px;
+        }
+
+        &.size-25 td {
+            padding: 25px;
+        }
+
+        &.size-26 td {
+            padding: 26px;
+        }
+
+        &.size-27 td {
+            padding: 27px;
+        }
+
+        &.size-28 td {
+            padding: 28px;
+        }
+
+        &.size-29 td {
+            padding: 29px;
+        }
+
+        &.size-30 td {
+            padding: 30px;
+        }
+
+        &.size-31 td {
+            padding: 31px;
+        }
+
+        &.size-32 td {
+            padding: 32px;
+        }
+
+        &.size-33 td {
+            padding: 33px;
+        }
+
+        &.size-34 td {
+            padding: 34px;
+        }
+
+        &.size-35 td {
+            padding: 35px;
+        }
+
+        &.size-36 td {
+            padding: 36px;
+        }
+
+        &.size-37 td {
+            padding: 37px;
+        }
+
+        &.size-38 td {
+            padding: 38px;
+        }
+
+        &.size-39 td {
+            padding: 39px;
+        }
+
+        &.size-40 td {
+            padding: 40px;
+        }
+    }
+}

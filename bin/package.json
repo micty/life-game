@@ -1,0 +1,13 @@
+{
+    "name": "life-game",
+    "version": "",
+    "repository": {},
+    "description": "生命游戏, 生命演化游戏",
+    "devDependencies": {
+        "web-master": "",
+        "html-entities-decoder": "^1.0.0"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    }
+}
