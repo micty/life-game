@@ -11,7 +11,8 @@
                     <li>3．如果一个格子周围白色格子少于2个，则该格子为黑；</li>
                     <li>4．如果一个格子周围有超过3个格子为白，则该格子为黑。</li>
                 </ul>
-                在平面上随机选几个格子为白，设定初始条件，然后不加任何干扰，让其自行演化。
+                <p>在平面上随机选几个格子为白，设定为初始条件，点击开始，不加任何干扰，让其自行演化。</p>
+                
             </div>
         </fieldset>
        
@@ -43,6 +44,15 @@
                     <li>白色格数：<label>{checked}</label></li>
                     <li>黑色格数：<label>{unchecked}</label></li>
                     <li>总格子数：<label>{total}</label></li>
+                </ul>
+            </template>
+        </fieldset>
+        <fieldset data-panel="/Game/Sidebar/Coordinate" class="coordinate">
+            <template>
+                <legend>坐标</legend>
+                <ul>
+                    <li>行号（y）：<label>{y}</label></li>
+                    <li>列号（x）：<label>{x}</label></li>
                 </ul>
             </template>
         </fieldset>

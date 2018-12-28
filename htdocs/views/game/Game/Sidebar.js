@@ -5,6 +5,7 @@
 KISP.panel('/Game/Sidebar', function (require, module, panel) {
     var KISP = require('KISP');
 
+    var Coordinate = module.require('Coordinate');
     var Operator = module.require('Operator');
     var Config = module.require('Config');
     var Stat = module.require('Stat');
@@ -92,6 +93,7 @@ KISP.panel('/Game/Sidebar', function (require, module, panel) {
     panel.on('render', function (options) {
         Operator.render();
         Config.render();
+        Coordinate.render();
 
         Stat.render({
             'frame': 0,
@@ -109,6 +111,10 @@ KISP.panel('/Game/Sidebar', function (require, module, panel) {
                 'frame': meta.frames,
                 'total': meta.total,
             });
+        },
+
+        coordinate: function (data) {
+            Coordinate.render(data);
         },
     };
 });

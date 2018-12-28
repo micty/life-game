@@ -1,1 +1,1 @@
-KISP.data({"/Game/Sidebar/Config":{size:5}}),KISP.config({App:{name:"life-game-ELDFL55654447"},Proxy:{base:"api/"},Mask:{opacity:.5},View:{},Navigator:{simulate:!0}}),KISP.data("build-time","2018-12-28 15:26:51");
+KISP.data({"/Game/Sidebar/Config":{size:5}}),KISP.config({App:{name:"life-game-ELDFL55654447"},Proxy:{base:"api/"},Mask:{opacity:.5},View:{},Navigator:{simulate:!0}}),KISP.data("build-time","2018-12-28 16:24:13");

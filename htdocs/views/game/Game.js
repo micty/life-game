@@ -32,6 +32,9 @@ KISP.view('/Game', function (require, module, view) {
             'check': function (count) {
                 Sidebar.update({ 'checked': count, });
             },
+            'mouseover': function (cell) {
+                Sidebar.coordinate({ 'x': cell.x, 'y': cell.y, });
+            },
         });
 
 

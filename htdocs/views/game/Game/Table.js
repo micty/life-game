@@ -82,6 +82,13 @@ KISP.panel('/Game/Table', function (require, module, panel) {
 
         table.render();
 
+
+        table.$.on('mouseover', 'td', function (event) {
+            var id = this.id;
+            var cell = table.get(id);
+
+            panel.fire('mouseover', [cell]);
+        });
         
     });
 

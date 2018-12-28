@@ -9,7 +9,7 @@
 
 
     <link rel="stylesheet" href="style/css/style.less.global.css?76FA" />
-    <link rel="stylesheet" href="style/css/views.game.view.css?1EE5" />
+    <link rel="stylesheet" href="style/css/views.game.view.css?96EB" />
 
 
 </head>
@@ -32,7 +32,8 @@
                         <li>3．如果一个格子周围白色格子少于2个，则该格子为黑；</li>
                         <li>4．如果一个格子周围有超过3个格子为白，则该格子为黑。</li>
                     </ul>
-                    在平面上随机选几个格子为白，设定初始条件，然后不加任何干扰，让其自行演化。
+                    <p>在平面上随机选几个格子为白，设定为初始条件，点击开始，不加任何干扰，让其自行演化。</p>
+                    
                 </div>
             </fieldset>
            
@@ -64,6 +65,15 @@
                         <li>白色格数：<label>{checked}</label></li>
                         <li>黑色格数：<label>{unchecked}</label></li>
                         <li>总格子数：<label>{total}</label></li>
+                    </ul>
+                </template>
+            </fieldset>
+            <fieldset data-panel="/Game/Sidebar/Coordinate" class="coordinate">
+                <template>
+                    <legend>坐标</legend>
+                    <ul>
+                        <li>行号（y）：<label>{y}</label></li>
+                        <li>列号（x）：<label>{x}</label></li>
                     </ul>
                 </template>
             </fieldset>
@@ -107,12 +117,13 @@
     <script src="lib/table/Table.js?5FAA"></script>
     <script src="lib/Defaults.js?9219"></script>
     <script src="views/game/Game/Sidebar/Config.js?FCF9"></script>
+    <script src="views/game/Game/Sidebar/Coordinate.js?99AA"></script>
     <script src="views/game/Game/Sidebar/Operator.js?E4A8"></script>
     <script src="views/game/Game/Sidebar/Stat.js?06AF"></script>
     <script src="views/game/Game/Table/Collection.js?9F67"></script>
-    <script src="views/game/Game/Sidebar.js?FB5E"></script>
-    <script src="views/game/Game/Table.js?DB3F"></script>
-    <script src="views/game/Game.js?28B6"></script>
+    <script src="views/game/Game/Sidebar.js?8C36"></script>
+    <script src="views/game/Game/Table.js?CA2E"></script>
+    <script src="views/game/Game.js?E586"></script>
     <script src="index.js?7FBE"></script>
 
 
